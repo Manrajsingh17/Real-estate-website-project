@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+
+<!-- Hero Section -->
+<header class="hero-section d-flex align-items-center justify-content-center text-center" id="hero">
+    <div class="overlay" aria-hidden="true"></div>
+  
+    <div class="hero-content">
+      <h1 class="display-4 fw-bold mb-3" id="hero-title">
+        <span class="highlight">Dream Homes</span> <span id="typed-text" aria-live="polite"></span>
+      </h1>
+  
+      <p class="lead mb-4" id="hero-sub">Find the best properties with us</p>
+  
+      <div class="hero-actions d-flex align-items-center justify-content-center gap-3">
+        <a href="#properties" class="btn btn-lg btn-gradient px-4" id="explore-btn">Explore Now</a>
+        <button id="search-btn" class="btn btn-lg btn-outline-secondary px-4" aria-haspopup="dialog" aria-controls="search-modal">
+          Quick Search
+        </button>
+      </div>
+    </div>
+  
+    <!-- Scroll-down indicator -->
+    <a href="#properties" class="scroll-down" aria-label="Scroll to properties">
+      <span class="chev"></span>
+    </a>
+  </header>
+  
+  <!-- Search modal (hidden by default) -->
+  <div id="search-modal" role="dialog" aria-modal="true" aria-hidden="true" class="search-modal">
+    <div class="search-inner">
+      <button class="close-search" aria-label="Close search">&times;</button>
+      <h3>Quick property search</h3>
+      <form id="quick-search-form" class="d-flex gap-2" onsubmit="return false;">
+        <input type="text" id="search-query" placeholder="City, neighborhood or property type" aria-label="Search query" />
+        <select id="search-type" aria-label="Property type">
+          <option value="">Any type</option>
+          <option>Apartment</option>
+          <option>House</option>
+          <option>Villa</option>
+          <option>Studio</option>
+        </select>
+        <button class="btn btn-primary" id="search-submit">Search</button>
+      </form>
+    </div>
+  </div>
+  
+
+  <!-- Properties Section -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Featured Properties</h2>
+  
+    <div class="row g-4">
+      <!-- Property Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 1">
+          <div class="card-body">
+            <h5 class="card-title">Luxury Villa</h5>
+            <p class="card-text">Beautiful villa with garden & pool.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Property Card 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 2">
+          <div class="card-body">
+            <h5 class="card-title">Modern Apartment</h5>
+            <p class="card-text">City apartment with amazing view.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Property Card 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1595526114035-0c4c0b7f6cf8?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 3">
+          <div class="card-body">
+            <h5 class="card-title">Cozy Cottage</h5>
+            <p class="card-text">A peaceful home in countryside.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Additional cards (kept same classes) -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 4">
+          <div class="card-body">
+            <h5 class="card-title">Seaside Retreat</h5>
+            <p class="card-text">Ocean views and beach access.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1486304883005-975c9f67c0d0?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 5">
+          <div class="card-body">
+            <h5 class="card-title">Mountain Cabin</h5>
+            <p class="card-text">Rustic cabin with scenic hikes nearby.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1505691723518-36aec2e63f69?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 6">
+          <div class="card-body">
+            <h5 class="card-title">Urban Loft</h5>
+            <p class="card-text">Open-plan loft in trendy neighborhood.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1499955085172-a104c9463ece?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 7">
+          <div class="card-body">
+            <h5 class="card-title">Suburban Home</h5>
+            <p class="card-text">Family-sized home in quiet suburb.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 8">
+          <div class="card-body">
+            <h5 class="card-title">Lake House</h5>
+            <p class="card-text">Peaceful property right on the lake.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1475855581690-80accde3ae2d?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 9">
+          <div class="card-body">
+            <h5 class="card-title">Penthouse Suite</h5>
+            <p class="card-text">Top-floor luxury with skyline views.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 10">
+          <div class="card-body">
+            <h5 class="card-title">Historic Townhouse</h5>
+            <p class="card-text">Charming property with character.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1505691723518-36aec2e63f69?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 11">
+          <div class="card-body">
+            <h5 class="card-title">Eco Home</h5>
+            <p class="card-text">Sustainable living with green tech.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1505691723518-36aec2e63f69?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Property 12">
+          <div class="card-body">
+            <h5 class="card-title">Studio Flat</h5>
+            <p class="card-text">Compact and modern studio, ideal for singles.</p>
+            <a href="property.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <!-- Why Choose Us -->
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title mb-5">🌟 Why Choose Us?</h2>
+      <div class="row g-4">
+        
+        <div class="col-md-4">
+          <div class="choose-card p-4 shadow-sm">
+            <div class="icon mb-3">🏡</div>
+            <h5>Wide Range of Properties</h5>
+            <p>From luxury villas to budget apartments, we have something for everyone.</p>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="choose-card p-4 shadow-sm">
+            <div class="icon mb-3">💰</div>
+            <h5>Affordable Pricing</h5>
+            <p>Get the best deals with transparent pricing and zero hidden charges.</p>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="choose-card p-4 shadow-sm">
+            <div class="icon mb-3">🤝</div>
+            <h5>Trusted by Thousands</h5>
+            <p>We are the first choice for property buyers and sellers across the city.</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+ <!-- Testimonials Section -->
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title mb-5">💬 What Our Clients Say</h2>
+  
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+  
+          <!-- Item 1 -->
+          <div class="carousel-item active">
+            <div class="testimonial-card p-4 shadow-sm mx-auto">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                   class="rounded-circle mb-3" width="90" height="90" alt="Client">
+              <p class="fst-italic">“I found my dream villa in just 2 days! Amazing service and smooth process.”</p>
+              <h6 class="fw-bold mt-3">Rajesh Kumar</h6>
+              <small class="text-muted">Businessman</small>
+            </div>
+          </div>
+  
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <div class="testimonial-card p-4 shadow-sm mx-auto">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                   class="rounded-circle mb-3" width="90" height="90" alt="Client">
+              <p class="fst-italic">“Professional agents and great deals. Highly recommend this company!”</p>
+              <h6 class="fw-bold mt-3">Priya Sharma</h6>
+              <small class="text-muted">Software Engineer</small>
+            </div>
+          </div>
+  
+          <!-- Item 3 -->
+          <div class="carousel-item">
+            <div class="testimonial-card p-4 shadow-sm mx-auto">
+              <img src="https://randomuser.me/api/portraits/men/65.jpg" 
+                   class="rounded-circle mb-3" width="90" height="90" alt="Client">
+              <p class="fst-italic">“Best real estate experience I’ve ever had. Hassle-free and quick!”</p>
+              <h6 class="fw-bold mt-3">Arjun Mehta</h6>
+              <small class="text-muted">Designer</small>
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Contact Section -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Contact Info -->
+        <div class="col-md-6">
+          <h4>Contact Us</h4>
+          <p>📍 401, high Street, Jaipur, Rajasthan</p>
+          <p>📞 +91 8000354007</p>
+          <p>✉️ manraj@gmail.com</p>
+        </div>
+        <!-- Google Map -->
+        <div class="col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.898186553159!2d75.78906531504386!3d26.912433883133307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3f2e3ad3c11%3A0x6f44cd70a4f8!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1696327784930!5m2!1sen!2sin"
+            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Grab all .card elements inside the container
+      const cards = Array.from(document.querySelectorAll('.container .card'));
+  
+      if (!('IntersectionObserver' in window)) {
+        // Fallback: reveal all cards if IntersectionObserver not supported
+        cards.forEach(card => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateX(0)';
+        });
+        return;
+      }
+  
+      // Prepare initial position: alternate left/right based on card index
+      cards.forEach((card, i) => {
+        const fromRight = (i % 2) === 0; // even index slides from right, odd from left
+        card.style.transform = fromRight ? 'translateX(40px) scale(0.99)' : 'translateX(-40px) scale(0.99)';
+        card.style.opacity = '0';
+      });
+  
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -10% 0px', // trigger a little before fully in view
+        threshold: 0.08
+      };
+  
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const card = entry.target;
+            // animate into place
+            card.style.transform = 'translateX(0) scale(1)';
+            card.style.opacity = '1';
+            // Optional: add slight stagger by using transitionDelay based on index
+            const idx = cards.indexOf(card);
+            if (idx >= 0) {
+              card.style.transitionDelay = Math.min(0.25, idx * 0.05) + 's';
+            }
+            // Stop observing once revealed
+            obs.unobserve(card);
+          }
+        });
+      }, observerOptions);
+  
+      cards.forEach(card => io.observe(card));
+    })();
+  </script>
+  <script>
+    (function(){
+      // Simple parallax effect on scroll (background position)
+      const hero = document.getElementById('hero');
+      if (hero) {
+        window.addEventListener('scroll', () => {
+          const scrolled = window.scrollY;
+          // subtle parallax movement (negative moves bg up slower than scroll)
+          hero.style.backgroundPosition = `center calc(50% - ${scrolled * 0.12}px)`;
+        }, { passive: true });
+      }
+    
+      // Typing/looping text for headline
+      const phrases = [
+        "Awaits You", 
+        "Perfect for Families", 
+        "Luxury & Comfort", 
+        "Your Next Investment"
+      ];
+      const typedEl = document.getElementById('typed-text');
+      let pi = 0, ci = 0, deleting = false;
+      const typeSpeed = 50, pause = 1500;
+    
+      function tick() {
+        const full = phrases[pi];
+        if (!deleting) {
+          typedEl.textContent = full.slice(0, ++ci);
+          if (ci === full.length) {
+            deleting = true;
+            setTimeout(tick, pause);
+            return;
+          }
+        } else {
+          typedEl.textContent = full.slice(0, --ci);
+          if (ci === 0) {
+            deleting = false;
+            pi = (pi + 1) % phrases.length;
+          }
+        }
+        setTimeout(tick, deleting ? typeSpeed * 0.6 : typeSpeed);
+      }
+      // start after small delay for nicer effect
+      setTimeout(tick, 500);
+    
+      // Search modal open/close logic
+      const searchBtn = document.getElementById('search-btn');
+      const modal = document.getElementById('search-modal');
+      const closeBtn = modal ? modal.querySelector('.close-search') : null;
+      const form = document.getElementById('quick-search-form');
+    
+      function openModal() {
+        if (!modal) return;
+        modal.setAttribute('aria-hidden', 'false');
+        // focus the input for accessibility
+        setTimeout(() => modal.querySelector('#search-query')?.focus(), 50);
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        searchBtn?.focus();
+      }
+    
+      searchBtn?.addEventListener('click', openModal);
+      closeBtn?.addEventListener('click', closeModal);
+      modal?.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.getAttribute('aria-hidden') === 'false') closeModal();
+      });
+    
+      // Dummy search submit (hook to your search logic / navigation)
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const q = document.getElementById('search-query').value.trim();
+        const type = document.getElementById('search-type').value;
+        // Replace with real search navigation / filtering
+        closeModal();
+        // Provide basic feedback (replace with real action)
+        alert('Searching for: ' + (q || 'any') + (type ? ' ('+type+')' : ''));
+      });
+    
+      // Smooth scroll for internal links (for the CTA and scroll indicator)
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e){
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    
+    })();
+    </script>
+</body>
+
+
+</html>
